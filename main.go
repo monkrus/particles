@@ -14,7 +14,7 @@ func main() {
 	//create new scanner
 	scanner := bufio.NewScanner(os.Stdin)
 
-	//
+	// option 1
 	for {
 		fmt.Print("Numbers: ")
 
@@ -34,3 +34,15 @@ func main() {
 
 	fmt.Println(input)
 }
+
+//option 2
+var name string
+var count int
+
+fmt.Scanf("%s", &name) 
+fmt.Scanf("%d", &count) 
+
+fmt.Printf("The word %s containg %d number of alphabets.",  
+name, count)
+
+	
