@@ -15,38 +15,22 @@ func main() {
 	scanner.Scan()
 	numbers := strings.Split(scanner.Text(), " ")
 	if len(numbers) != 2 {
-		log.Fatal("First line should contains only 2 numbers\n")
+		log.Fatal("First line should contain only 2 numbers\n")
 	}
 
 	//read from  input
-	for {
-		fmt.Print("Numbers: ")
-		scanner.Scan()
-		text := scanner.Text()
-		if len(text) != 0 {
-        fmt.Println(text)
-		input = append(input, text)
-		
-		} else {
-			break
-		
-		}
+	for   _, s := range numbers {
+		convert = ints32(s)
+		fmt.Println(convert)
 	}
-	fmt.Println(input)
-}
 
-   // split string by spaces
-   s:= strings.Split (input)
 
-   // check slice has N elements
-   func Find(input []string, val string) (int, bool) {
-    for i, item := range input {
-        if item == val {
-            return i, true
-        }
-    }
-    return -1, false
-}
+
+		
+
+
+
+	
 
    
 // 4. Преобразовать элементы массива в числа, первый элемент - L, второй - N
