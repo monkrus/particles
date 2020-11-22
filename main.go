@@ -14,35 +14,41 @@ func main() {
 	//create new scanner
 	scanner := bufio.NewScanner(os.Stdin)
 
-	// option 1
+	//read from  input
 	for {
 		fmt.Print("Numbers: ")
-
 		scanner.Scan()
-
 		text := scanner.Text()
-
 		if len(text) != 0 {
-
-			fmt.Println(text)
-
-			input = append(input, text)
+        fmt.Println(text)
+		input = append(input, text)
+		
 		} else {
 			break
+		
 		}
 	}
-
 	fmt.Println(input)
 }
 
-//option 2
-var name string
-var count int
+   // split string by spaces
+   s:= strings.Split (input)
 
-fmt.Scanf("%s", &name) 
-fmt.Scanf("%d", &count) 
+   // check slice has N elements
+   func Find(input []string, val string) (int, bool) {
+    for i, item := range input {
+        if item == val {
+            return i, true
+        }
+    }
+    return -1, false
+}
 
-fmt.Printf("The word %s containg %d number of alphabets.",  
-name, count)
+   // 
+
+   
+
+
+  
 
 	
