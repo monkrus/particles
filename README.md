@@ -6,7 +6,6 @@
 
 2. Run `go mod init`
 
-3. Install PostgresSQL
 
 
 
