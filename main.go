@@ -11,8 +11,12 @@ func main() {
 	// make an empty slice
 	input := make([]string, 0)
 
-	//create new scanner
 	scanner := bufio.NewScanner(os.Stdin)
+	scanner.Scan()
+	numbers := strings.Split(scanner.Text(), " ")
+	if len(numbers) != 2 {
+		log.Fatal("First line should contains only 2 numbers\n")
+	}
 
 	//read from  input
 	for {
