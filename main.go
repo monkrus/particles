@@ -3,7 +3,9 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"log"
 	"os"
+	"strconv"
 )
 
 func main() {
@@ -18,22 +20,34 @@ func main() {
 		log.Fatal("First line should contain only 2 numbers\n")
 	}
 
-	//read from  input
-	for   _, s := range numbers {
-		convert = ints32(s)
-		fmt.Println(convert)
-	}
+	//read  and   save from  input
+	L, err := strconv.Atoi(numbers[0])
+    checkError(err)
+	N, err := strconv.Atoi(numbers[1])
+	checkError(err)
 
 
-
-		
-
-
-
+   // create slice with N elements
+	var s []int	
 	
+	for i := 0; i < len(s); i++ {
+		fmt.Printf("%x ", s[i])
+	}
+	if len(s) = 0 {
+		log.Fatal("The slice contains no strings")
+	}
+	else len(s) != L(numbers) {
+		log.Fatal("????")
+	}
+    
 
-   
-// 4. Преобразовать элементы массива в числа, первый элемент - L, второй - N
+
+
+
+
+
+
+
 
 // 5. Создать строковый срез на N элементов
 
