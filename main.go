@@ -1,12 +1,22 @@
 package main
 
 import (
-    "bufio"
-    "fmt"
-    "os"
+	"bufio"
+	"fmt"
+	"os"
 )
 
-reader := bufio.NewReader(os.Stdin)
-fmt.Print("Enter text: ")
-text, _ := reader.ReadString('\n')
-fmt.Println(text)
+func main() {
+	 input :=  
+     
+
+	scanner := bufio.NewScanner(os.Stdin)
+	for scanner.Scan() {
+		fmt.Println(scanner.Text())
+	}
+	if err := scanner.Err(); err != nil {
+		fmt.Fprintln(os.Stderr, "reading standard input:", err)
+
+	}
+
+}
